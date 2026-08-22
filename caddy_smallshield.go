@@ -11,7 +11,7 @@ import (
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 	"github.com/caddyserver/caddy/v2/caddyconfig/httpcaddyfile"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp"
-	"github.com/proofrock/caddy_smallshield/ipsearch"
+	"github.com/catzy007/caddy_smallshield/ipsearch"
 	"go.uber.org/zap"
 )
 

@@ -82,7 +82,7 @@ func (m *CaddySmallShield) Provision(ctx caddy.Context) error {
 }
 
 func (m CaddySmallShield) ServeHTTP(w http.ResponseWriter, r *http.Request, next caddyhttp.Handler) error {
-	ip := extractIP(r.RemoteAddr)
+	ip := caddyhttp.GetVar(r.Context(), caddyhttp.ClientIPVarKey).(string)
 
 	// IPv6 addresses cannot be looked up in IPv4 lists: apply when_ipv6 policy.
 	if parsed := net.ParseIP(ip); parsed == nil || parsed.To4() == nil {
